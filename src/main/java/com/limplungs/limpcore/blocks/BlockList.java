@@ -12,30 +12,32 @@ public class BlockList
 	/**
 	 *  BlockData
 	 */
-	private static BlockData dataBlockBasic = new BlockData(5F, 5F, "pickaxe", 2, "blockBasic", Material.ROCK, LimpCore.tabLimpCore);
+	private static BlockData dataBlockLimpium = new BlockData(5F, 5F, "pickaxe", 2, "blockLimpium", Material.ROCK, LimpCore.tabLimpCore);
 	
 	
 	/**
 	 *  Blocks
 	 */
-	public static BlockBasic blockBasic;
+	public static BlockBasic blockLimpium;
 	
 	
 	/**
 	 *  Block Registry
+	 *  Registered during the 'preInit' stage.
 	 */
 	public static void registerBlocks()
 	{
-		blockBasic = new BlockBasic(dataBlockBasic);
+		// copper hydroxyl carbonate (Malachite)
+		blockLimpium = new BlockBasic(dataBlockLimpium);
 	}
 
 	
 	/**
 	 *  Block Renderer
-	 *  @param renderItem - RenderItem passed in to render items during postInit stage.
+	 *  @param renderItem - RenderItem passed in to render items during 'init' stage.
 	 */
 	public static void renderBlocks(RenderItem renderItem) 
 	{
-		renderItem.getItemModelMesher().register(Item.getItemFromBlock(blockBasic), 0, new ModelResourceLocation(LimpCore.MODID + ":" + blockBasic.getName(), "inventory"));	
+		renderItem.getItemModelMesher().register(Item.getItemFromBlock(blockLimpium), 0, new ModelResourceLocation(LimpCore.MODID + ":" + blockLimpium.getName(), "inventory"));	
 	}
 }

@@ -1,13 +1,12 @@
 package com.limplungs.limpcore;
 
 import com.limplungs.limpcore.blocks.BlockList;
+import com.limplungs.limpcore.items.ItemList;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -25,6 +24,7 @@ public class LimpCore
 	public void preInit(FMLPreInitializationEvent event)
 	{
     	BlockList.registerBlocks();
+    	ItemList.registerItems();
 	}
 
 	@EventHandler
@@ -32,9 +32,10 @@ public class LimpCore
 	{
 		if(event.getSide() == Side.CLIENT)
 		{
-			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
+			RenderItem renderer = Minecraft.getMinecraft().getRenderItem();
 
-			BlockList.renderBlocks(renderItem);
+			BlockList.renderBlocks(renderer);
+			ItemList.renderItems(renderer);
 		}
 	}
 	
@@ -44,7 +45,7 @@ public class LimpCore
 		@SideOnly(Side.CLIENT)
 		public Item getTabIconItem()
 		{
-			return new ItemStack(Blocks.ANVIL).getItem();
+			return ItemList.dustCarbon;
 		}
 	};
 }

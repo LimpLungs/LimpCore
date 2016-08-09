@@ -1,6 +1,6 @@
 itemGroup.tabLimpCore=LimpCore
 
-tile.limpcore_blockBasic.name=Basic Block
+tile.limpcore_blockLimpium.name=Limpium Block
 
-item.limpcore_itemBasic.name=Basic Item
+item.limpcore_dustCarbon.name=Carbon Dust
 

@@ -15,7 +15,7 @@ public class BlockData
 	protected String name = "NewBlock";
 	protected String unlocalizedName = (LimpCore.MODID + "_" + name);
 	protected Material material = Material.ROCK;
-	protected CreativeTabs creativeTab = CreativeTabs.MATERIALS;
+	protected CreativeTabs creativeTab = LimpCore.tabLimpCore;
 	
 	public BlockData(float hard, float resist, String tool, int level, String name, Material mat, CreativeTabs tab)
 	{

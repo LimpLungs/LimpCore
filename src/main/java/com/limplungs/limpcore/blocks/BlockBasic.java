@@ -20,11 +20,11 @@ public class BlockBasic extends Block
 		this.setCreativeTab(blockdata.creativeTab);
 		
 		// Block Register
+		this.setRegistryName(blockdata.name);
 		GameRegistry.registerBlock(this); // deprecated
 		
 		// Research!!!
 		// Not sure what to do with this...
-		// this.setRegistryName( ); ????
 		// GameRegistry.register(this); ????
 	}
 	
