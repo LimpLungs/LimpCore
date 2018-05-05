@@ -6,7 +6,8 @@ import com.limplungs.limpcore.items.ItemList;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -20,11 +21,19 @@ public class LimpCore
     public static final String MODID = "limpcore";
     public static final String VERSION = "2.0dev1"; 
     
+    public static RegisterEvents register_handler = new RegisterEvents();
+    
     @EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+    	BlockList.registerBlockData();
     	BlockList.registerBlocks();
+    	BlockList.registerItemBlocks();
+    	
+    	ItemList.registerItemData();
     	ItemList.registerItems();
+    	
+    	MinecraftForge.EVENT_BUS.register(register_handler);
 	}
 
 	@EventHandler
@@ -43,9 +52,9 @@ public class LimpCore
 	{
 		@Override
 		@SideOnly(Side.CLIENT)
-		public Item getTabIconItem()
+		public ItemStack getTabIconItem()
 		{
-			return ItemList.dustCarbon;
+			return new ItemStack(BlockList.BLOCK_LIMPIUM);
 		}
 	};
 }

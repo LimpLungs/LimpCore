@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "limpcore:blocks/blockLimpium"
+		"all": "limpcore:blocks/blocklimpium"
 	}
 }

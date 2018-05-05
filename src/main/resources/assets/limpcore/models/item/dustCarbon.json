@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "limpcore:items/dustCarbon"
+		"layer0": "limpcore:items/dustcarbon"
 	},
 	"display": {
 		"thirdperson": {

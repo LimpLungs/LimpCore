@@ -1,5 +1,5 @@
 {
-	"parent": "limpcore:block/blockLimpium",
+	"parent": "limpcore:block/blocklimpium",
 	"display": {
 		"thirdperson": {
 			"rotation": [ 10, -45, 170 ],

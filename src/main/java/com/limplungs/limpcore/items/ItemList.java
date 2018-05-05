@@ -1,21 +1,27 @@
 package com.limplungs.limpcore.items;
 
+import java.util.ArrayList;
+
 import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+
 import com.limplungs.limpcore.LimpCore;
 
 public class ItemList 
 {
-	/**
-	 *  Item Data
-	 */
-	private static ItemData dataDustCarbon = new ItemData(64, LimpCore.tabLimpCore, "dustCarbon");
+	public static ArrayList<Item> ITEMS = new ArrayList<Item>();
+	
+	private static ItemData DATA_DUST_CARBON;
+	public static ItemBasic DUST_CARBON;
 	
 	
-	/**
-	 *  Items
-	 */
-	public static ItemBasic dustCarbon;
+	
+	public static void registerItemData()
+	{
+		// Items
+		DATA_DUST_CARBON = new ItemData(64, LimpCore.tabLimpCore, "dustcarbon");
+	}
 	
 	
 	/**
@@ -24,7 +30,8 @@ public class ItemList
 	 */
 	public static void registerItems()
 	{
-		dustCarbon = new ItemBasic(dataDustCarbon);
+		// Items
+		ITEMS.add(DUST_CARBON = new ItemBasic(DATA_DUST_CARBON));
 	}
 
 	
@@ -34,6 +41,6 @@ public class ItemList
 	 */
 	public static void renderItems(RenderItem renderItem) 
 	{
-		renderItem.getItemModelMesher().register(dustCarbon, 0, new ModelResourceLocation(LimpCore.MODID + ":" + dustCarbon.getName(), "inventory"));	
+		renderItem.getItemModelMesher().register(DUST_CARBON, 0, new ModelResourceLocation(LimpCore.MODID + ":" + DUST_CARBON.getName(), "inventory"));	
 	}
 }

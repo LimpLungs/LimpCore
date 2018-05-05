@@ -1,11 +1,10 @@
 package com.limplungs.limpcore.items;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ItemBasic extends Item
 {
-	private final String name;
+private final String name;
 	
 	public ItemBasic(ItemData itemdata)
 	{
@@ -17,7 +16,6 @@ public class ItemBasic extends Item
 		
 		// Item Register
 		this.setRegistryName(itemdata.name);
-		GameRegistry.registerItem(this); // deprecated
 	}
 	
 	public String getName()
