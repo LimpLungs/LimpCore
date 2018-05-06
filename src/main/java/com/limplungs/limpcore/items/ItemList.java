@@ -20,7 +20,7 @@ public class ItemList
 	public static void registerItemData()
 	{
 		// Items
-		DATA_DUST_CARBON = new ItemData(64, LimpCore.tabLimpCore, "dustcarbon");
+		DATA_DUST_CARBON = new ItemData("dustcarbon", LimpCore.MODID, 64, LimpCore.tabLimpCore);
 	}
 	
 	

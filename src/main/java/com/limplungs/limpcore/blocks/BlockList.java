@@ -29,7 +29,7 @@ public class BlockList
 	 */
 	public static void registerBlockData()
 	{
-		DATA_BLOCK_LIMPIUM = new BlockData(5F, 5F, "pickaxe", 2, "blocklimpium", Material.ROCK, LimpCore.tabLimpCore);
+		DATA_BLOCK_LIMPIUM = new BlockData("blocklimpium", LimpCore.MODID, 5F, 5F, "pickaxe", 2, Material.ROCK, LimpCore.tabLimpCore);
 	}
 	
 	

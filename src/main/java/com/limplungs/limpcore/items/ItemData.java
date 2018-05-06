@@ -12,11 +12,22 @@ public class ItemData
 	protected String unlocalizedName = (LimpCore.MODID + "_" + name);
 	protected CreativeTabs creativeTab = LimpCore.tabLimpCore;
 	
-	public ItemData(int stackSize, CreativeTabs tab, String name)
+	/*
+	 * String modname - Mod.MODID
+	 */
+	public ItemData(String name, String modname, int stackSize, CreativeTabs tab)
 	{
 		this.stackSize = stackSize;
 		this.creativeTab = tab;
 		this.name = name;
-		this.unlocalizedName = (LimpCore.MODID + "_" + name);
+		
+		if (modname == null)
+		{
+			this.unlocalizedName = (LimpCore.MODID + "_" + name);
+		}
+		else
+		{
+			this.unlocalizedName = (modname + "_" + name);
+		}
 	}
 }

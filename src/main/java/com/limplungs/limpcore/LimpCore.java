@@ -19,7 +19,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 public class LimpCore
 {
     public static final String MODID = "limpcore";
-    public static final String VERSION = "2.0dev1"; 
+    public static final String VERSION = "3.0.1"; // #-> version   0-2-> alpha, beta, release    #-> build number
     
     public static RegisterEvents register_handler = new RegisterEvents();
     
